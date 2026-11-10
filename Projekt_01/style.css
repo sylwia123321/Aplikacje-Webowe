@@ -28,6 +28,7 @@ body {
   list-style: none;
   display: flex;
   gap: 15px;
+  padding: 0;
 }
 
 .nav-links a {
@@ -44,8 +45,12 @@ body {
   flex: 1;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 25px 10px;
   width: 100%;
+}
+
+.intro {
+  width: 95%;
+  margin: 0 auto;
 }
 
 .intro h1 {
@@ -75,6 +80,7 @@ body {
   padding: 50px;
   max-width: 800px;
   margin: 0 auto;
+  margin-bottom: 2em;
 }
 
 .form-group {
@@ -87,10 +93,12 @@ body {
 
 .form-group input,
 .form-group select,
-.form-group textarea {
+.form-group textarea,
+#subject {
   width: 100%;
   border-radius: 5px;
-  padding: 5px 0;
+  padding: 0.7em 0;
+  text-align: center;
 }
 
 .submit-btn {
@@ -114,7 +122,7 @@ body {
   margin-bottom: 25px;
 }
 
-.image-grid {
+.image-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -139,6 +147,7 @@ body {
 .video-container {
   max-width: 600px;
   margin: 0 auto;
+  margin-bottom: 2em;
   padding: 15px;
   border-radius: 7px;
   border: 1px solid;
@@ -162,12 +171,33 @@ footer {
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
+.halloween-counter,
+.clock {
+  margin: 25px 0;
+  padding: 15px;
+  background-color: #2a1b0e;
+  border: 1.5px solid #a55b26;
+  border-radius: 5px;
+  text-align: center;
+  color: #ebe7d9;
+  font-family: monospace;
+}
+
+@media (max-width: 765px) {
   .navbar {
     flex-direction: column;
     gap: 10px;
   }
   .hero h1 {
     font-size: 2rem;
+  }
+  .main-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding: 0.5em;
   }
 }
